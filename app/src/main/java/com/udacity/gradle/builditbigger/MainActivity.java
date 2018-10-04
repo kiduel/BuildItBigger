@@ -41,7 +41,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void tellJoke(View view) {
-        new JokeAsyncTask().execute(this);
+        new JokeAsyncTask().execute(getApplicationContext());
 
     }
 }

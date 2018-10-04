@@ -7,7 +7,7 @@ import android.widget.TextView;
 public class JokeDisplayingActivity extends AppCompatActivity {
 
     TextView textView;
-    public String JOKE_KEY = "joke_key";
+    public static String JOKE_KEY = "joke_key";
 
 
     @Override
@@ -17,9 +17,9 @@ public class JokeDisplayingActivity extends AppCompatActivity {
         setContentView(R.layout.activity_joke_displaying);
         textView = (TextView) findViewById(R.id.joke_text_view);
 
-        Bundle joke = getIntent().getExtras();
-        String joke_string = joke.getString("joke_key");
-        textView.setText(joke_string);
-
+        if (getIntent().hasExtra(JOKE_KEY)){
+            String joke_string = getIntent().getStringExtra(JOKE_KEY);
+            textView.setText(joke_string);
+        }
     }
 }

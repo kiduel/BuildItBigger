@@ -22,9 +22,8 @@ public class EmptyStringTest {
     public ActivityTestRule<MainActivity> testEmpty = new ActivityTestRule<>(
             MainActivity.class);
     @Test
-    public void confirmNotEmpty(){
+    public void confirmNotEmpty() {
        onView(withId(R.id.joke_button)).perform(click());
-       onView(withId(R.id.joke_text_view)).check((matches(withText(not(" ")))));
+       onView(withId(R.id.joke_text_view)).check((matches(withText(not("")))));
     }
-
 }

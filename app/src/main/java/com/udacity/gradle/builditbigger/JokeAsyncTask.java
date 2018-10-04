@@ -49,7 +49,7 @@ class JokeAsyncTask extends AsyncTask<Context, Void, String> {
     @Override
     protected void onPostExecute(String result) {
         Intent intent = new Intent(context, JokeDisplayingActivity.class);
-        intent.putExtra("joke_key",result);
+        intent.putExtra(JokeDisplayingActivity.JOKE_KEY,result);
         context.startActivity(intent);
     }
 }
