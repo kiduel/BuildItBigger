@@ -8,7 +8,7 @@
     <TextView
         android:id="@+id/joke_text_view"
         tools:text="This is a joke"
-        android:textSize="40sp"
+        android:textSize="20sp"
         android:gravity="center"
         android:layout_width="match_parent"
         android:layout_height="match_parent" />
