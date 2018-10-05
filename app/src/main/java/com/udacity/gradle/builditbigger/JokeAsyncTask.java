@@ -43,14 +43,15 @@ class JokeAsyncTask extends AsyncTask<Context, Void, String> {
         try {
             return myApiService.fetchJoke().execute().getData();
         } catch (IOException e) {
-            return e.getMessage();
+            // If there was an error fetching the joke, we return null.
+            return null;
         }
     }
     @Override
     protected void onPostExecute(String result) {
         Intent intent = new Intent(context, JokeDisplayingActivity.class);
         intent.putExtra(JokeDisplayingActivity.JOKE_KEY,result);
+        intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
         context.startActivity(intent);
     }
 }
-
