@@ -62,6 +62,6 @@ dependencies {
 
 
     testImplementation 'junit:junit:4.12'
-    implementation project(':tellJoke')
+//    implementation project(':tellJoke')
     implementation project(':jokeDisplayer')
 }
