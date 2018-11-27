@@ -26,12 +26,12 @@ flavors allow for much bigger projects with minimal added complexity.
 * Configure an integration test suite that runs against the local App Engine development server
 
 ## Steps
-# 1: Created a Java library
-# 2: Created an Android Library
-# 3: Step 3: Setup GCE
-# 4: Added Functional Tests
-# 5: Added a Paid Flavor
-# 6: Added Interstitial Ad
+ * Created a Java library
+ * Created an Android Library
+ * Step 3: Setup GCE
+ * Added Functional Tests
+ * Added a Paid Flavor
+ * Added Interstitial Ad
 
 ### Configure Test Task
 To tie it all together, create a Gradle task that:
